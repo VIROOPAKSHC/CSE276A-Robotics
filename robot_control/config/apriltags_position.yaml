@@ -1,0 +1,129 @@
+# This file contains the estimated positions and orientations of the AprilTags.
+#
+# Assumption:
+# 1. Boundary tags (0-7) are mounted on virtual "walls" facing INWARDS.
+# 2. Obstacle tags (8-11) are mounted on the obstacle faces facing OUTWARDS.
+#
+# World coordinate system:
+#   X-axis: East (+X) / West (-X)
+#   Y-axis: North (+Y) / South (-Y)
+#   Z-axis: Up (+Z) / Down (-Z)
+#
+# Orientations (quaternions) for cardinal directions:
+#   - Facing North (+Y): qx=0, qy=0, qz=1, qw=0
+#   - Facing South (-Y): qx=0.707, qy=0, qz=0, qw=0.707
+#   - Facing East (+X):  qx=0, qy=-0.707, qz=0.707, qw=0
+#   - Facing West (-X):  qx=0.5, qy=-0.5, qz=-0.5, qw=0.5
+#
+apriltags:
+  # Boundary Tags (Facing Inwards)
+  - id: 0
+    x: 1.17
+    y: 0.85
+    z: 0.0
+    # On East wall, facing West (inward)
+    qx: 0.5
+    qy: -0.5
+    qz: -0.5
+    qw: 0.5
+  - id: 1
+    x: -0.85
+    y: 1.17
+    z: 0.0
+    # On North wall, facing South (inward)
+    qx: 0.707
+    qy: 0.0
+    qz: 0.0
+    qw: 0.707
+  - id: 2
+    x: 0.85
+    y: -1.17
+    z: 0.0
+    # On South wall, facing North (inward)
+    qx: 0.0
+    qy: 0.0
+    qz: 1.0
+    qw: 0.0
+  - id: 3
+    x: 1.17
+    y: -0.85
+    z: 0.0
+    # On East wall, facing West (inward)
+    qx: 0.5
+    qy: -0.5
+    qz: -0.5
+    qw: 0.5
+  - id: 4
+    x: -0.85
+    y: -1.17
+    z: 0.0
+    # On South wall, facing North (inward)
+    qx: 0.0
+    qy: 0.0
+    qz: 1.0
+    qw: 0.0
+  - id: 5
+    x: -1.17
+    y: -0.85
+    z: 0.0
+    # On West wall, facing East (inward)
+    qx: 0.0
+    qy: -0.707
+    qz: 0.707
+    qw: 0.0
+  - id: 6
+    x: -1.17
+    y: 0.85
+    z: 0.0
+    # On West wall, facing East (inward)
+    qx: 0.0
+    qy: -0.707
+    qz: 0.707
+    qw: 0.0
+  - id: 7
+    x: 0.85
+    y: 1.17
+    z: 0.0
+    # On North wall, facing South (inward)
+    qx: 0.707
+    qy: 0.0
+    qz: 0.0
+    qw: 0.707
+
+  # Obstacle Tags (Facing Outwards)
+  - id: 8
+    x: -0.17
+    y: 0
+    z: 0.0
+    # On West face of obstacle, facing West (outward)
+    qx: 0.5
+    qy: -0.5
+    qz: -0.5
+    qw: 0.5
+  - id: 9
+    x: 0
+    y: -0.17
+    z: 0.0
+    # On South face of obstacle, facing South (outward)
+    qx: 0.707
+    qy: 0.0
+    qz: 0.0
+    qw: 0.707
+  - id: 10
+    x: 0.17
+    y: 0
+    z: 0.0
+    # On East face of obstacle, facing East (outward)
+    qx: 0.0
+    qy: -0.707
+    qz: 0.707
+    qw: 0.0
+  - id: 11
+    x: 0
+    y: 0.17
+    z: 0.0
+    # On North face of obstacle, facing North (outward)
+    qx: 0.0
+    qy: 0.0
+    qz: 1.0
+    qw: 0.0
